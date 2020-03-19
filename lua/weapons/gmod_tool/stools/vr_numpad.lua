@@ -13,6 +13,7 @@ TOOL.ClientConVar["toggle"] = 1
 local vr_numpad_model = CreateClientConVar("vr_numpad_model", 0, true, true, "The model to show when spawned")
 local vr_numpad_valueOn = CreateClientConVar("vr_numpad_value_on", 0, true, true, "The value to send out when activated")
 local vr_numpad_valueOff = CreateClientConVar("vr_numpad_value_off", 0, true, true, "The value to send out when not activated")
+local vr_numpad_toggle = CreateClientConVar("vr_numpad_value_toggle", 0, true, true, "Whether to toggle activated/deactive state")
  
 if CLIENT then
     language.Add('Tool.vr_numpad.name', 'VR Input')
@@ -22,7 +23,10 @@ if CLIENT then
     function TOOL.BuildCPanel(panel)
 
         local Presets = vgui.Create("ControlPresets")
-            Presets:AddConVar("")
+            Presets:AddConVar("vr_numpad_model")
+            Presets:AddConVar("vr_numpad_value_on")
+            Presets:AddConVar("vr_numpad_value_off")
+            Presets:AddConVar("vr_numpad_value_toggle")
 
     end
 end
