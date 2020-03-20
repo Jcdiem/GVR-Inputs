@@ -1,2 +1,2 @@
-# GVR-Wire
-Wiremod support for the VR library in the game Garry's Mod
+# GVR-Input
+Mapping VR buttons to numpad inputs in GMod
